@@ -4,7 +4,7 @@ import { PER_PAGE_FIRST } from "../../../src/utils/pagination";
 import { handleRedirectsAndReturnData } from "../../../src/utils/slug";
 import { GET_PAGE } from "../../../src/queries/category_index/index";
 import Link from "next/link";
-import { isEmpty } from "lodash";
+import { isEmpty } from "../../../src/utils/xdash";
 
 const Category = ({ data }) => {
   console.log({ data });

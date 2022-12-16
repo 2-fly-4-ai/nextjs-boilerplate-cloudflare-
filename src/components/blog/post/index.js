@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "../../image";
 import { sanitize } from "../../../utils/miscellaneous";
-import { isEmpty } from "lodash";
 
 const Post = ({ post }) => {
   console.log({ post });
@@ -17,7 +16,7 @@ const Post = ({ post }) => {
           />
         ) : null}
       </div> */}
-      <Link href={`blog/${post?.slug}`}>
+      <Link href={`${post?.uri}`}>
         <a>
           <h2
             className="my-1 text-2xl  tracking-tight text-gray-900 dark:text-white hover:text-blue-700"

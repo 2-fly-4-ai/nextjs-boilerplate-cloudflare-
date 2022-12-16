@@ -1,4 +1,4 @@
-import { isEmpty } from "lodash";
+import { isEmpty } from "../../../utils/xdash";
 import { useState } from "react";
 import Link from "next/link";
 import PropTypes from "prop-types";

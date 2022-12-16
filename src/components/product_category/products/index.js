@@ -1,4 +1,3 @@
-import { isEmpty, isArray } from "lodash";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import Image from "next/image";

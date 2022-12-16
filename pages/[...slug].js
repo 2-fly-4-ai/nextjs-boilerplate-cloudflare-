@@ -1,6 +1,6 @@
 import client from "../src/apollo/client";
 import { GET_PAGES_URI } from "../src/queries/pages/get-pages";
-import { isEmpty } from "lodash";
+import { isEmpty } from "../src/utils/xdash";
 import { GET_PAGE } from "../src/queries/pages/get-page";
 import { useRouter } from "next/router";
 import Layout from "../src/components/layout";
@@ -12,6 +12,10 @@ import {
 } from "../src/utils/slug";
 import { sanitize } from "../src/utils/miscellaneous";
 import { useState } from "react";
+
+export const config = {
+  runtime: "nodejs",
+};
 
 const Page = ({ data }) => {
   const router = useRouter();

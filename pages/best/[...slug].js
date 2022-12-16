@@ -1,7 +1,7 @@
 import client from "../../src/apollo/client";
-import { GET_PAGES_URI } from "../../src/queries/tags/get-pages";
-import { isEmpty, slice } from "lodash";
+import { isEmpty } from "../../src/utils/xdash";
 import { GET_PAGE } from "../../src/queries/tags/get-page";
+import { GET_PAGES_URI } from "../../src/queries/tags/get-pages";
 import { useRouter } from "next/router";
 import Layout from "../../src/components/layout";
 import {
@@ -17,6 +17,10 @@ import ContentAccordion from "../../src/components/product_tags/accordion";
 import Share from "../../src/components/product_tags/share";
 import SideBar from "../../src/components/product_tags/sidebar";
 import LoadMoreTagProducts from "../../src/components/product_tags/load-more-tag-products";
+
+export const config = {
+  runtime: "nodejs",
+};
 
 const Page = ({ data }) => {
   // NOT USING THIS... Delete in next cleanup

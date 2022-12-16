@@ -3,7 +3,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useLazyQuery } from "@apollo/client";
 import PropTypes from "prop-types";
-import { isEmpty } from "lodash";
+import { isEmpty } from "../../../utils/xdash";
 import { PER_PAGE_FIRST } from "../../../utils/pagination";
 import { GET_PAGE } from "../../../queries/tags/get-more-products";
 import TagProducts from "../tag_products";

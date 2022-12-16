@@ -1,30 +1,29 @@
-import {isEmpty} from 'lodash';
-import PropTypes from 'prop-types';
+import { isEmpty } from "../../../utils/xdash";
+import PropTypes from "prop-types";
 
-import Nav from './nav';
-const Header = ( {header, headerMenus, slug} ) => {
+import Nav from "./nav";
+const Header = ({ header, headerMenus, slug }) => {
+  if (isEmpty(headerMenus)) {
+    return null;
+  }
 
-	if ( isEmpty( headerMenus ) ) {
-		return null;
-	}
-
-	return (
-		<header>
-			<Nav header={header} headerMenus={headerMenus} slug={slug}/>
-		</header>
-	);
+  return (
+    <header>
+      <Nav header={header} headerMenus={headerMenus} slug={slug} />
+    </header>
+  );
 };
 
 Header.propTypes = {
   header: PropTypes.object,
   headerMenus: PropTypes.array,
-  slug: PropTypes.string
+  slug: PropTypes.string,
 };
 
 Header.defaultProps = {
   header: {},
   headerMenus: [],
-  slug: ''
+  slug: "",
 };
 
 export default Header;

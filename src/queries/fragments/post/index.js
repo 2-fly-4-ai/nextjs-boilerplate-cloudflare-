@@ -5,6 +5,7 @@ const PostFragment = `
   excerpt
   content
   slug
+  uri
   featuredImage {
     node {
       ...ImageFragment

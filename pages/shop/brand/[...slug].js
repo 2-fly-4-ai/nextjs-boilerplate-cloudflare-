@@ -1,6 +1,6 @@
 import client from "../../../src/apollo/client";
 import { GET_PAGES_URI } from "../../../src/queries/brand/get-pages";
-import { isEmpty, slice } from "lodash";
+import { isEmpty } from "../../../src/utils/xdash";
 import { GET_PAGE } from "../../../src/queries/brand/get-page";
 import { useRouter } from "next/router";
 import Layout from "../../../src/components/layout";
@@ -12,7 +12,6 @@ import {
 import { sanitize } from "../../../src/utils/miscellaneous";
 import Link from "next/link";
 import React from "react";
-import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 import Image from "next/image";
 import LoadMoreProducts from "../../../src/components/product_brand";

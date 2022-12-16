@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLazyQuery } from "@apollo/client";
-import { isEmpty } from "lodash";
+import { isEmpty } from "../src/utils/xdash";
 import Router from "next/router";
 
 import client from "../src/apollo/client";
@@ -18,6 +18,10 @@ import ErrorMessage from "../src/components/error";
 import Loading from "../src/components/loading";
 import { PER_PAGE_FIRST } from "../src/utils/pagination";
 import ResultInfo from "../src/components/search/result-info";
+
+export const config = {
+  runtime: "nodejs",
+};
 
 export default function Search({ data }) {
   const searchQueryString = process.browser ? Router?.query?.s ?? "" : "";

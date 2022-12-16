@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLazyQuery } from "@apollo/client";
 import PropTypes from "prop-types";
-import { isEmpty } from "lodash";
+import { isEmpty } from "../../../utils/xdash";
 import Product from "../products";
 import { PER_PAGE_FIRST } from "../../../utils/pagination";
 import { GET_PAGE } from "../../../queries/categories-new/get-load-more-products_children";

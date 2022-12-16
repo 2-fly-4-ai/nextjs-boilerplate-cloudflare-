@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLazyQuery } from "@apollo/client";
-import { isEmpty } from "lodash";
+import { isEmpty } from "../src/utils/xdash";
 import Router from "next/router";
 
 import client from "../src/apollo/client";

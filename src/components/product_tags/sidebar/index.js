@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { sanitize } from "../../../utils/miscellaneous";
-import { isEmpty } from "lodash";
+import { isEmpty } from "../../../utils/xdash";
 
 export default function SideBar({ data }) {
   let page_tags = [];

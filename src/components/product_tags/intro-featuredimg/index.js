@@ -1,5 +1,5 @@
 import React from "react";
-import { isEmpty } from "lodash";
+import { isEmpty } from "../../../utils/xdash";
 import { sanitize } from "../../../utils/miscellaneous";
 import Image from "next/image";
 

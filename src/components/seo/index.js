@@ -1,4 +1,3 @@
-import { isEmpty } from "lodash";
 import { NextSeo } from "next-seo";
 import PropTypes from "prop-types";
 

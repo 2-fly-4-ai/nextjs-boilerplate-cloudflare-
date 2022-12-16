@@ -1,4 +1,4 @@
-import { isEmpty, isArray } from "lodash";
+import { isEmpty } from "../../../src/utils/xdash";
 import client from "../../../src/apollo/client";
 import { useRouter } from "next/router";
 import Layout from "../../../src/components/layout";
@@ -9,8 +9,6 @@ import {
 import { GET_POST } from "../../../src/queries/productsv2/get-post";
 import { GET_POST_SLUGS } from "../../../src/queries/productsv2/get-posts";
 import { sanitize } from "../../../src/utils/miscellaneous";
-import { Tabs } from "flowbite-react";
-import { Table } from "flowbite-react";
 import Link from "next/link";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -266,7 +264,7 @@ const Post = ({ data }) => {
               <span className="text-gray-800 font-semibold">Tags: </span>
 
               {!isEmpty(data?.post?.productTags?.nodes) &&
-              isArray(data?.post?.productTags?.nodes) ? (
+              Array.isArray(data?.post?.productTags?.nodes) ? (
                 <div>
                   <ul className="flex flex-wrap gap-2">
                     {data?.post?.productTags?.nodes.map((tag) => (
@@ -292,7 +290,7 @@ const Post = ({ data }) => {
             <div className="space-x-2 mt-5 flex mb-5">
               <span className="text-gray-800 font-semibold">Category: </span>
               {!isEmpty(data?.post?.productTaxonomies?.nodes) &&
-              isArray(data?.post?.productTaxonomies?.nodes) ? (
+              Array.isArray(data?.post?.productTaxonomies?.nodes) ? (
                 <div>
                   <ul className="flex gap-2">
                     {data?.post?.productTaxonomies?.nodes.map((category) => (
@@ -325,7 +323,7 @@ const Post = ({ data }) => {
         </div>
 
         {/*tabs-section*/}
-        <div className="container pb-16 mx-auto mt-6">
+        {/* <div className="container pb-16 mx-auto mt-6">
           <Tabs.Group aria-label="Default tabs" style="default">
             <Tabs.Item active={true} title="Features">
               <div
@@ -365,7 +363,7 @@ const Post = ({ data }) => {
               </div>
             </Tabs.Item>
           </Tabs.Group>
-        </div>
+        </div> */}
 
         {/*comments-section*/}
         {/* <div className="flex mx-auto max-w-screen-2xl  px-8 flex-auto">

@@ -2,7 +2,6 @@ import Header from "./header";
 import Footer from "./footer";
 import Head from "next/head";
 import Seo from "../seo";
-import { isEmpty } from "lodash";
 import { sanitize } from "../../utils/miscellaneous";
 import PropTypes from "prop-types";
 
@@ -37,7 +36,7 @@ const Layout = ({ data, isPost, children }) => {
 
   return (
     <div>
-      {/* <Seo seo={seo} uri={uri} /> */}
+      <Seo seo={seo} uri={uri} />
       <Head>
         <link rel="shortcut icon" href={header?.favicon} />
       </Head>

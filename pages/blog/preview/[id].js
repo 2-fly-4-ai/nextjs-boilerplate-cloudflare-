@@ -5,7 +5,7 @@ import { getAuthToken } from "../../../src/utils/cookies";
 import { getLoginPreviewRedirectUrl } from "../../../src/utils/redirects";
 import { GET_POST_BY_ID } from "../../../src/queries/posts/get-post";
 import { sanitize } from "../../../src/utils/miscellaneous";
-import { isEmpty } from "lodash";
+import { isEmpty } from "../../../src/utils/xdash";
 import {
   FALLBACK,
   handleRedirectsAndReturnData,
@@ -15,6 +15,7 @@ import Link from "next/link";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { FacebookIcon, TwitterIcon } from "react-share";
 import NewsletterSubscribe from "../../../src/components/layout/footer/NewsletterSubscribe";
+
 //fuck
 const PostPreview = ({ data }) => {
   return (

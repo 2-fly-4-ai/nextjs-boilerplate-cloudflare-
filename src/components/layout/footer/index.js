@@ -1,4 +1,4 @@
-import { isEmpty, isArray } from "lodash";
+import { isEmpty } from "../../../utils/xdash";
 import { sanitize } from "../../../utils/miscellaneous";
 import Link from "next/link";
 import { getIconComponentByName } from "../../../utils/icons-map";
@@ -19,7 +19,7 @@ const Footer = ({
             <h2 className="mb-2 text-sm font-bold text-gray-100 uppercase dark:text-white">
               Pet-Store
             </h2>
-            {!isEmpty(footerMenus1) && isArray(footerMenus1) ? (
+            {!isEmpty(footerMenus1) && Array.isArray(footerMenus1) ? (
               <ul>
                 {footerMenus1.map((footerMenu) => (
                   <li
@@ -41,7 +41,7 @@ const Footer = ({
             <h2 className="mb-2 text-sm font-bold text-gray-100 uppercase dark:text-white">
               Legal
             </h2>
-            {!isEmpty(footerMenus2) && isArray(footerMenus2) ? (
+            {!isEmpty(footerMenus2) && Array.isArray(footerMenus2) ? (
               <ul>
                 {footerMenus2.map((footerMenu) => (
                   <li
@@ -62,7 +62,7 @@ const Footer = ({
             <h2 className="mb-2 text-sm font-bold text-gray-100 uppercase dark:text-white">
               Archives
             </h2>
-            {!isEmpty(footerMenus3) && isArray(footerMenus3) ? (
+            {!isEmpty(footerMenus3) && Array.isArray(footerMenus3) ? (
               <ul>
                 {footerMenus3.map((footerMenu) => (
                   <li
@@ -109,7 +109,7 @@ const Footer = ({
     // 				{/*Mailchimp Newsletter Subscription*/}
 
     // 				{/* Footer Menus*/}
-    // 				{!isEmpty(footerMenus) && isArray(footerMenus) ? (
+    // 				{!isEmpty(footerMenus) && Array.isArray(footerMenus) ? (
     // 					<ul>
     // 						{footerMenus.map(footerMenu => (
     // 							<li key={footerMenu?.node?.id}>
@@ -129,7 +129,7 @@ const Footer = ({
     // 				{/*Mailchimp Newsletter Subscription*/}
 
     // 				{/* Footer Menus*/}
-    // 				{!isEmpty(footerMenus2) && isArray(footerMenus2) ? (
+    // 				{!isEmpty(footerMenus2) && Array.isArray(footerMenus2) ? (
     // 					<ul>
     // 						{footerMenus2.map(footerMenu => (
     // 							<li key={footerMenu?.node?.id}>
@@ -149,7 +149,7 @@ const Footer = ({
     // 				{/*Mailchimp Newsletter Subscription*/}
 
     // 				{/* Footer Menus*/}
-    // 				{!isEmpty(footerMenus3) && isArray(footerMenus3) ? (
+    // 				{!isEmpty(footerMenus3) && Array.isArray(footerMenus3) ? (
     // 					<ul>
     // 						{footerMenus3.map(footerMenu => (
     // 							<li key={footerMenu?.node?.id}>
@@ -170,7 +170,7 @@ const Footer = ({
     // < div className = "mb-8 mt-8 w-full flex flex-wrap" >
     // 			<div className="w-full md:w-1/2 lg:w-1/4 text-white">{footer?.copyrightText ? footer.copyrightText : '© Codeytek Academy 2020'}</div>
     // 			<div className="w-full lg:w-3/4 flex justify-end">
-    // 				{!isEmpty(footer?.socialLinks) && isArray(footer?.socialLinks) ? (
+    // 				{!isEmpty(footer?.socialLinks) && Array.isArray(footer?.socialLinks) ? (
     // 					<ul className="flex items-center">
     // 						{footer.socialLinks.map(socialLink => (
     // 							<li key={socialLink?.iconName} className="ml-4">

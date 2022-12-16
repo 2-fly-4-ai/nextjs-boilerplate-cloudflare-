@@ -1,9 +1,9 @@
-import { isEmpty, isArray } from "lodash";
+import { isEmpty } from "../../../utils/xdash";
 import Post from "../post";
 import PropTypes from "prop-types";
 
 const Posts = ({ posts }) => {
-  if (isEmpty(posts) && !isArray(posts)) {
+  if (isEmpty(posts) && !Array.isArray(posts)) {
     return null;
   }
 
