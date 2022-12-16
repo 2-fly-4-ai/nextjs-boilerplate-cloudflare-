@@ -4,9 +4,11 @@ const allowedImageWordPressDomain = new URL(
 ).hostname;
 
 module.exports = {
-  experimental: {
-    runtime: "experimental-edge",
-  },
+  reactStrictMode: true,
+  swcMinify: true,
+  // experimental: {
+  //   runtime: "experimental-edge",
+  // },
 
   // async redirects(NEXT_PUBLIC_WORDPRESS_SITE_URL) {
   //   return [
@@ -55,6 +57,7 @@ module.exports = {
   //     },
   //   ];
   // },
+
   trailingSlash: false,
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],

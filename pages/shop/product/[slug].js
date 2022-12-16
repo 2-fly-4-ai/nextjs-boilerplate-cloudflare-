@@ -61,7 +61,7 @@ const Post = ({ data }) => {
         {/* Top-box-Whole */}
         <div className="container flex flex-col lg:flex-row gap-5 mx-auto">
           {/* Top-box-left */}
-          <div className="">
+          <div className=" w-full">
             <div className="container pt-4 pb-8 flex items-center">
               <a href="" className="text-primary text-base">
                 <i className="fa-solid fa-house"></i>
@@ -144,33 +144,47 @@ const Post = ({ data }) => {
               width="500"
             />
             <div className="grid grid-cols-5 gap-4 mt-4">
-              {data?.post?.single_product_acf?.productImageGalleryUrls
-                .split(", ")
-                .slice(0, 5)
-                .map((imageUrl, index) => {
-                  return (
-                    <Image
-                      onClick={() => {
-                        setOpen(true);
-                        activeCategory(index);
-                      }}
-                      key={imageUrl}
-                      src={imageUrl}
-                      alt="product2"
-                      width="400"
-                      height="400"
-                      className={`${
-                        isActive(index) ? "..." : ""
-                      } justify-center`}
-                    />
-                  );
-                })}
+              {!isEmpty(
+                data?.post?.single_product_acf?.productImageGalleryUrls
+              ) &&
+              !Array.isArray(
+                data?.post?.single_product_acf?.productImageGalleryUrls
+              )
+                ? data?.post?.single_product_acf?.productImageGalleryUrls
+                    .split(", ")
+                    .slice(0, 5)
+                    .map((imageUrl, index) => {
+                      return (
+                        <Image
+                          onClick={() => {
+                            setOpen(true);
+                            activeCategory(index);
+                          }}
+                          key={imageUrl}
+                          src={imageUrl}
+                          alt="product2"
+                          width="400"
+                          height="400"
+                          className={`${
+                            isActive(index) ? "..." : ""
+                          } justify-center`}
+                        />
+                      );
+                    })
+                : null}
 
-              {data?.post?.single_product_acf?.productImageGalleryUrls
-                .split(", ")
-                .map((imageUrl) => {
-                  slides_list.push({ src: imageUrl });
-                })}
+              {!isEmpty(
+                data?.post?.single_product_acf?.productImageGalleryUrls
+              ) &&
+              !Array.isArray(
+                data?.post?.single_product_acf?.productImageGalleryUrls
+              )
+                ? data?.post?.single_product_acf?.productImageGalleryUrls
+                    .split(", ")
+                    .map((imageUrl) => {
+                      slides_list.push({ src: imageUrl });
+                    })
+                : null}
 
               {/* Lightbox  @https://yet-another-react-lightbox.com/*/}
               <Lightbox
