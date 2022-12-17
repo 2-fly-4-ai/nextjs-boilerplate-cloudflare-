@@ -18,10 +18,6 @@ import Share from "../../src/components/product_tags/share";
 import SideBar from "../../src/components/product_tags/sidebar";
 import LoadMoreTagProducts from "../../src/components/product_tags/load-more-tag-products";
 
-export const config = {
-  runtime: "nodejs",
-};
-
 const Page = ({ data }) => {
   // NOT USING THIS... Delete in next cleanup
   // function handleFocus() {

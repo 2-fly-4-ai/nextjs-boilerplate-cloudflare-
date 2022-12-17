@@ -6,9 +6,9 @@ const allowedImageWordPressDomain = new URL(
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  // experimental: {
-  //   runtime: "experimental-edge",
-  // },
+  experimental: {
+    runtime: "experimental-edge",
+  },
 
   // async redirects(NEXT_PUBLIC_WORDPRESS_SITE_URL) {
   //   return [

@@ -42,7 +42,7 @@ const Seo = ({ seo, uri }) => {
   return (
     <NextSeo
       title={title}
-      description={opengraphDescription || metaDesc}
+      description={opengraphDescription || metaDesc || title}
       canonical={opengraphUrl}
       noindex={metaRobotsNoindex}
       nofollow={metaRobotsNofollow}

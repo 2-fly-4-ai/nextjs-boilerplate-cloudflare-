@@ -2,7 +2,6 @@ import Header from "./header";
 import Footer from "./footer";
 import Head from "next/head";
 import Seo from "../seo";
-import { sanitize } from "../../utils/miscellaneous";
 import PropTypes from "prop-types";
 
 const Layout = ({ data, isPost, children }) => {

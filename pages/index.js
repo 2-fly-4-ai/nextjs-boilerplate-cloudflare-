@@ -1,12 +1,7 @@
 import client from "../src/apollo/client";
 import { GET_PAGE } from "../src/queries/pages/get-page";
-import { useRouter } from "next/router";
 import { isEmpty } from "../src/utils/xdash";
-import {
-  FALLBACK,
-  handleRedirectsAndReturnData,
-  isCustomPageUri,
-} from "../src/utils/slug";
+import { handleRedirectsAndReturnData } from "../src/utils/slug";
 import { sanitize } from "../src/utils/miscellaneous";
 import Layout from "../src/components/layout";
 import Image from "next/image";
